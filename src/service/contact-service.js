@@ -43,7 +43,7 @@ const update = async (user, request, id) => {
     });
 
     if (!foundContact) {
-        throw new ResponseError(400, "Contact does not exists");
+        throw new ResponseError(404, "Contact does not exists");
     }
     return prismaClient.contact.update({
         where: {
@@ -81,7 +81,7 @@ const get = async (user, id) => {
     });
 
     if (!foundContact) {
-        throw new ResponseError(400, "Contact does not exists");
+        throw new ResponseError(404, "Contact does not exists");
     }
     return foundContact
 
