@@ -1,7 +1,7 @@
 
 import {prismaClient} from "../application/database.js";
 import {validate} from "../validation/validation.js";
-import {createAddressValidation, getAddressValidation, updateAddressValidation} from "./address-validation.js";
+import {createAddressValidation, getAddressValidation, updateAddressValidation} from "../validation/address-validation.js";
 import {getContactValidation} from "../validation/contact-validation.js";
 import {ResponseError} from "../error/response-error.js";
 
